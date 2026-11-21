@@ -1,6 +1,6 @@
-# halxr-website
+# aretic-systems.github.io (HAL website)
 
-Public marketing site for Halxr. Audience: accelerator programs and investors. Owners: Joseph diTommaso (@jditommaso1), Patrick Myers (@pmyers16). Product code is in the private `halxr/HAL` repo.
+Public marketing site for HAL, by Aretic Systems (formerly Halxr). Audience: accelerator programs and investors. Owners: Joseph diTommaso (@jditommaso1), Patrick Myers (@pmyers16). Product code is in the private `aretic-systems/HAL` repo.
 
 ## What HAL is (the positioning the site must carry)
 
@@ -22,12 +22,12 @@ Public marketing site for Halxr. Audience: accelerator programs and investors. O
 
 ## Code
 
-- Static site: `index.html`, `styles.css`, `favicon.svg`, `images/`. No framework, no build step. The only JavaScript is the small inline script that runs the console clock, draws the sample student's radar charts, and drives the 360° view; keep JS minimal.
-- Hosted on GitHub Pages from `main` (root), served at https://www.halxr.com. `.nojekyll` disables Jekyll processing.
+- Static site in `hal/`: `hal/index.html`, `hal/styles.css`, `hal/favicon.svg`, `hal/images/`. Keep asset paths relative so they resolve under `/hal/`. The root `index.html` is only a placeholder that forwards to `/hal/` until there is an Aretic Systems company page. No framework, no build step. The only JavaScript is the small inline script that runs the console clock, draws the sample student's radar charts, and drives the 360° view; keep JS minimal.
+- This repo is the org site `aretic-systems.github.io`, hosted on GitHub Pages from `main` (root) at https://areticsystems.com; HAL is at https://areticsystems.com/hal. `.nojekyll` disables Jekyll processing.
 - Must work at phone width (16px side gutters, no horizontal scroll) and respect `prefers-reduced-motion`.
 
 ## Content rules
 
 - Never publish claims we can't back up (traction numbers, partners, customer logos, results). Placeholders are marked with [brackets]; mock data is labeled as a concept mockup with sample data. Every statistic links to its source (most come from the Confluence Problem Statement, Competitive Landscape and research pages). Keep the honest note that HAL has no pilot results yet until it does.
 - Confluence describes an outer loop that learns across all learners in a topic. The founders' rule for the site is that both loops serve one student and no one else's curriculum changes; keep the site's wording that way unless they say otherwise.
-- Draft state: the `noindex` meta tag and the "Draft" top bar stay until both founders approve. Custom domain: www.halxr.com (connected 2026-10-23; the `CNAME` file in the repo root must stay, or the domain disconnects). The bare halxr.com needs four A records at Namecheap (185.199.108-111.153); GitHub then redirects it to www.
+- Draft state: the `noindex` meta tag and the "Draft" top bar stay until both founders approve. Custom domain: areticsystems.com (the `CNAME` file in the repo root must stay, or the domain disconnects). areticsystems.com needs the four GitHub Pages A records at Namecheap (185.199.108-111.153) and `www` as a CNAME to aretic-systems.github.io. areticsystems.ai and halxr.com are redirected by Cloudflare (halxr.com/* goes to areticsystems.com/hal/*), not by this repo.
